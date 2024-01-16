@@ -125,7 +125,6 @@ namespace TimeAndMaterialUsingJunit.ClassesFolder
                 string alertBox = alert.Text;
                 Console.WriteLine("Alert box text: " + alertBox);
 
-
                 alertMessage = true;
                 alert.Accept();
                 Console.WriteLine("Alert was accepted : " + alertMessage);
@@ -151,6 +150,9 @@ namespace TimeAndMaterialUsingJunit.ClassesFolder
 
             IWebElement dropDownField = driver.FindElement(By.XPath("//*[@id='logoutForm']/ul/li/ul/li[2]/a"));
             dropDownField.Click();
+
+            //Retrive the Current page url:
+
             string url = driver.Url;
             Assert.Pass(url);
 

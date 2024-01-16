@@ -31,24 +31,14 @@ namespace TimeAndMaterialUsingJunit.TestClassFolder
             TimeAndMaterial timeAndMaterial_Obj = new TimeAndMaterial();
             timeAndMaterial_Obj.Click_TM_and_Create(driver);
 
-
-            //CreateEditDelete createEditDelete_Obj = new CreateEditDelete();
-
-            //createEditDelete_Obj.Create_Time_And_Material(driver);
-
-
         }
 
         //test-01
-        [Test, Order(0)]
+        [Test, Order(1)]
         public void Create_TM_Record()
         {
-
             CreateEditDelete createEditDelete_Obj = new CreateEditDelete();
             createEditDelete_Obj.Create_Time_And_Material(driver);
-
-
-
         }
 
         //Test-02
@@ -57,7 +47,6 @@ namespace TimeAndMaterialUsingJunit.TestClassFolder
         {
             CreateEditDelete createEditDelete_Obj = new CreateEditDelete();
             createEditDelete_Obj.Edit_Time_And_Material(driver);
-
         }
 
         //Test-03
@@ -67,7 +56,6 @@ namespace TimeAndMaterialUsingJunit.TestClassFolder
         {
             CreateEditDelete createEditDelete_Obj = new CreateEditDelete();
             createEditDelete_Obj.Delete_Time_And_Material(driver);
-
         }
 
         [TearDown]
