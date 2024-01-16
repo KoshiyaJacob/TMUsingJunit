@@ -142,7 +142,19 @@ namespace TimeAndMaterialUsingJunit.ClassesFolder
             //Console.WriteLine("Alert box text" + alertBox);
             //alert.Accept();
 
+           //Taking Screenshot and save
 
+            try
+            {
+                Screenshot ss = ((ITakesScreenshot)driver).GetScreenshot();
+                ss.SaveAsFile(@"D:\Screenshot\SeleniumTestingScreenshot.jpg");
+                Console.WriteLine("Screenshot saved");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
             //Logout
 
             IWebElement helloHari = driver.FindElement(By.XPath("//*[@id=\"logoutForm\"]/ul/li/a"));
@@ -155,7 +167,6 @@ namespace TimeAndMaterialUsingJunit.ClassesFolder
 
             string url = driver.Url;
             Assert.Pass(url);
-
 
             //string url = driver.Url;
             //Console.WriteLine(url);
