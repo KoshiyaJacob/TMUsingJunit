@@ -12,6 +12,7 @@ using TimeAndMaterialUsingJunit.Utilities;
 namespace TimeAndMaterialUsingJunit.TestClassFolder
 {
     [TestFixture]
+   
     public class TM_testClass : Commondriver
     {
 
@@ -20,6 +21,8 @@ namespace TimeAndMaterialUsingJunit.TestClassFolder
         public void Set_Up_TM()
         {
             driver = new ChromeDriver();
+
+
             driver.Navigate().GoToUrl("http://horse.industryconnect.io/Account/Login?ReturnUrl=%2f");
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
@@ -35,6 +38,7 @@ namespace TimeAndMaterialUsingJunit.TestClassFolder
 
         //test-01
         [Test, Order(1)]
+        
         public void Create_TM_Record()
         {
             CreateEditDelete createEditDelete_Obj = new CreateEditDelete();
@@ -43,6 +47,7 @@ namespace TimeAndMaterialUsingJunit.TestClassFolder
 
         //Test-02
         [Test, Order(2)]
+        
         public void Edit_Time_Record()
         {
             CreateEditDelete createEditDelete_Obj = new CreateEditDelete();
